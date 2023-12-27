@@ -88,13 +88,11 @@ Abra o arquivo venda/urls.py e adicione o seguinte código:
     ]
 Agora você poderá acessar o navegador na URL 'menu_inicial/s'
 
------------------------ CONTINUAR DAQUI ---------------------------
-
 Parte 8:
 Criar uma pasta chamada "templates", a qual irá conter os arquivos html da aplicação.
 Criar um arquivo .html dentro da pasta templates.
 Criar uma view que renderiza o arquivo .html criado dentro do arquivo 'core/views.py'.
-Criar a rota dentro do arquivo 'hospital/urls.py'
+Criar a rota dentro do arquivo 'venda/urls.py'
 Adicionar o caminho da pasta template no arquivo de configurações 'hospital/settings.py'
     'DIRS': [os.path.join(BASE_DIR, 'templates')],
 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Meus Produtos</title>
+    </head>
+
+    <body>
+        <h1>Produtos cadastrados no Banco de Dados</h1>
+
+        <a href="/exemplo_ola_mundo">
+            <button type="button">Ola Mundo!</button>
+        </a>
+
+        <ul style="font-size: 18px;">
+        <!-- Executa comandos do Python -->
+        {% for produto in produtos %}
+            <!-- Acessa o conteudo de variáveis -->
+            <li>
+                {{produto.nome}}
+                <ul style="font-size: 14px;">
+                    <li>Preco: {{ produto.preco }}</li>
+                </ul>
+            </li>
+        {% endfor %}
+        </ul>
+
+        <!--Usando CSS direto no HTML-->
+        <h2 style="color:rgb(0, 255, 13);">INFORMAÇÕES ADICIONAIS</h2>
+        <p>Contato: (99) 99999-99999.</p>
+    </body>
+</html>
