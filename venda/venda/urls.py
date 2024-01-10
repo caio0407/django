@@ -17,9 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core import views
+from django.views.generic import RedirectView 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('exemplo_ola_mundo/', views.exemplo_ola_mundo),
     path('mostra_produtos/', views.mostra_produtos),
+    path('cadastra_produtos/', views.cadastra_produtos),
+    path('cadastra_produtos/submit', views.cadastra_produtos_submit),
+    path('', RedirectView.as_view(url="/mostra_produtos/")), #Definindo a página 'agenda' como Inicial usando RedirectView
 ]

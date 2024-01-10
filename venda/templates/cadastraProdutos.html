@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cadastro de Produtos</title>
+    </head>
+
+    <body>
+        <h1>Adicione a seguir as informações a serem cadastrados no Banco de Dados</h1>
+        
+        <a href="/">
+            <button type="button">Voltar!</button>
+        </a>
+
+        <form action="submit" method="POST"> {% csrf_token %}
+            <label>Nome:</label> <br>
+            <input type="number" name="id_produto" value="{{ produto.id }}" hidden>
+            <input type="text" name="nome" size="18" value="{{ produto.nome }}"> <br>
+        
+            <label>Descrição:</label> <br>
+            <input type="text" name="descricao" size="18" value="{{ produto.descricao }}"> <br>
+            
+            <label>Preço:</label> <br>
+            <input type="number" name="preco" step="0.01" value="{{ produto.preco }}"> <br>
+
+            <label>Ficha Técnica:</label> <br>
+            <textarea name="ficha_tecnica" rows="5" cols="19">{{ produto.ficha_tecnica }}</textarea> <br>
+        
+            <button type="submit">Salvar</button>
+        </form>
+
+        <!--Usando CSS direto no HTML-->
+        <h2 style="color:rgb(0, 255, 13);">INFORMAÇÕES ADICIONAIS</h2>
+        <p>Contato: (99) 99999-99999.</p>
+    </body>
+</html>
